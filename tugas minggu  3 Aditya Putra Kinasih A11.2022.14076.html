@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <body bgcolor="lightGray"></body>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multimedia HTML 5</title>
+</head>
+<body>
+    <h2>Mengelola Multimedia Menggunakan HTML</h2>
+    <button onclick="playVid()" type="button">Play Video</button>
+    <button onclick="pauseVid()" type="button">Pause Video</button>
+    <button onclick="durationVid()" type="button">Video Duration</button>
+    <button onclick="enablecontrolsVid()" type="button">Enable Controls</button>
+    <button onclick="disablecontrolsVid()" type="button">Disable Controls</button>
+    <br>
+    <video id="myVideo" width="320" height="240">
+        <source src="Theme Song_ Upin Ipin Musim 9.mp4" type="video/mp4">
+        <h1>Video Upin dan Ipin</h1>
+    <video controls>
+        <source src="Theme Song_ Upin Ipin Musim 9.webm" type="video/webm" />
+        <source src="Theme Song_ Upin Ipin Musim 9.mp4" type="video/mp4" />
+        <track src="sub Upin Ipin.html" kinds="subtitles" srclang="id" labels="indonesia" default/>
+
+        WEBVTT
+
+00:00.000 --> 00:03.000
+<v Roger Bingham >Ipin ipin dah mulai</v>
+
+00:04.000 --> 00:07.000
+<v Roger Bingham >Upin dan ipin inilah dia</v>
+
+00:08.000 --> 00:10.000
+<v Roger Bingham >Kembar Seiras Itu biasa</v>
+
+00:11.000 --> 00:13.000
+<v Roger Bingham >Upin dan Ipin ragam aksinya</v>
+
+00:14.000 --> 00:16.000
+<v Roger Bingham >Kami disenengi siapa jua</v>
+
+00:17.000 --> 00:20.000
+<v Roger Bingham >Upin dan Ipin selamanya</v>
+
+
+    </video>
+    <iframe width="320" height="240" src=
+    title="Youtube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+    ></iframe>
+</body>
+<script>
+    var vid = document.getElementById("myVideo");
+
+    function playVid() {
+    vid.play();
+    vid.loop = true;
+    }
+
+    function pauseVid() {
+    vid.pause();
+    }
+    
+    function durationVid() {
+        alert(vid.duration);
+    }
+
+    function enableControls() {
+        vid.controls = true
+        vid.load ();
+    }
+
+    function disableControls() {
+        vid.controls = false;
+        vid.load();
+    }
+
+    function checkControls() {
+        alert(vid.controls);
+    }
+</script>
+</html>
